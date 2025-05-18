@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/favicon.svg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .booking-form-logo {
+            margin-top: -16px;
+            height: 80px;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            background-color: #4950575b;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #b39b9b;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #ff0000;
+            color: #ffffff;
+        }
+
+        .calendar-input {
+            cursor: pointer;
+        }
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        /* footer {
+            background: linear-gradient(to right, #ff7b54, #ff5a33);
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="text-white py-3">
+        <!-- <div class="container">
+            <h1 class="text-center">Book an Appointment</h1>
+        </div> -->
+        <div class="booking-form-logo">
+            <a class="navbar-brand">
+                <img src="logo/logo.png" alt="RealEstatePro Logo" width="150"> <!-- Logo image -->
+            </a>
+        </div>
+    </header>
+
+    <!-- Form Container -->
+    <div class="form-container py-5 my-5">
+        <div class="container pb-4">
+            <h1 class="text-center">Book an Appointment</h1>
+        </div>
+        <form id="bookingForm">
+            <!-- Full Name -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" placeholder="First Name"
+                        required>
+                </div>
+                <div class="col-md-4">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last Name"
+                        required>
+                </div>
+                <div class="col-md-4">
+                    <label for="otherNames" class="form-label">Other Names (Optional)</label>
+                    <input type="text" id="otherNames" name="otherNames" class="form-control" placeholder="Other Names">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <!-- Phone Number -->
+                <div class="mb-3 w-50">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <div class="input-group">
+                        <span class="input-group-text">+234</span>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"
+                            placeholder="e.g., 8012345678" required>
+                    </div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="mb-3 w-50">
+                    <label for="emailAddress" class="form-label">Email Address</label>
+                    <input type="email" id="emailAddress" name="emailAddress" class="form-control"
+                        placeholder="e.g., example@mail.com" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <!-- Property of Interest -->
+                <div class="mb-3 w-50">
+                    <label for="property" class="form-label">Property Type</label>
+                    <select id="property" name="property" class="form-select" required>
+                        <option value="" hidden selected>Select Property Of Interest</option>
+                        <option>Commercial</option>
+                        <option>Residential</option>
+                        <option>Industrial</option>
+                    </select>
+                </div>
+
+                <!-- Property Option -->
+                <div class="col-md-3 w-50">
+                    <label for="propertyOption" class="form-label">Property Option</label>
+                    <select id="propertyOption" class="form-select">
+                        <option hidden selected>Select Property Option</option>
+                        <option>Lease</option>
+                        <option>Rent</option>
+                        <option>Sales</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- Preferred Date -->
+            <div class="mb-3 w-50">
+                <label for="preferredDate" class="form-label">Preferred Date</label>
+                <input type="text" id="preferredDate" name="preferredDate" class="form-control calendar-input"
+                    placeholder="Select an Appointment Date" required>
+            </div>
+
+            <!-- Appointment Details -->
+            <div class="mb-3">
+                <label for="details" class="form-label">Appointment Details (Optional)</label>
+                <textarea id="details" name="details" class="form-control" rows="3"
+                    placeholder="Please provide any additional details..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-submit">Book Appointment</button>
+            </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <!-- <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About RealEstatePro</h5>
+                    <p>We offer a wide range of commercial, residential, and industrial real estate services tailored to
+                        your needs.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="listings.html" class="text-white">Listings</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+                <!-- Connect With Us Section -->
+    <div class="col-md-3 mb-3">
+        <h5>Connect with us</h5>
+        <ul class="list-unstyled">
+            <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none;">
+                    <i class="bi bi-facebook bi-lg" style="color: #3b5998;"></i>
+                    Facebook
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none;">
+                    <i class="bi bi-twitter bi-lg" style="color: #1da1f2;"></i>
+                    Twitter
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none;">
+                    <i class="bi bi-instagram bi-lg" style="color: #e1306c;"></i>
+                    Instagram
+                </a>
+            </li>
+            <li class="mb-2">
+                <a href="#" class="text-white" style="text-decoration: none;">
+                    <i class="bi bi-linkedin bi-lg" style="color: #0077b5;"></i>
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </div>
+    <hr class="bg-white">
+    <p class="text-center">© 2024 RealEstatePro. All rights reserved.</p>
+    </div>
+    </footer> -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Custom Script -->
+    <script>
+            // Initialize Flatpickr
+            document.addEventListener('DOMContentLoaded', function () {
+                flatpickr("#preferredDate", {
+                    dateFormat: "Y-m-d",
+                    minDate: "today",
+                });
+
+                // Form submission
+                document.getElementById('bookingForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Pop-up message
+                    alert("Your Appointment has been successfully submitted. We will reach out to you shortly. Thank you! 👍");
+
+                    // Reset form
+                    this.reset();
+
+                    // Redirect to index.html
+                    setTimeout(() => {
+                        window.location.href = "index.html";
+                    }, 2000);
+                });
+            });
+    </script>
+</body>
+
+</html>

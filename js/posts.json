@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "5 Tips for First-Time Home Buyers",
+        "content": "Buying your first home can be daunting. Here are 5 tips to make it easier.",
+        "image": "images/home-buying-tips.jpg",
+        "author": "John Doe",
+        "views": 102,
+        "date": "2024-12-01"
+    },
+    {
+        "id": 2,
+        "title": "How to Prepare Your Home for Sale",
+        "content": "Get the best value for your home by following these staging tips.",
+        "image": "images/home-staging.jpg",
+        "author": "Jane Smith",
+        "views": 215,
+        "date": "2024-11-25"
+    },
+    {
+        "id": 3,
+        "title": "Real Estate Trends in 2024",
+        "content": "Explore the latest trends in the real estate market and what they mean for buyers and sellers.",
+        "image": "images/real-estate-trends.jpg",
+        "author": "Alex Brown",
+        "views": 330,
+        "date": "2024-11-15"
+    },
+    {
+        "id": 4,
+        "title": "The Benefits of Investing in Real Estate",
+        "content": "Learn why real estate remains one of the safest investment options.",
+        "image": "images/investing-real-estate.jpg",
+        "author": "Sophia Lee",
+        "views": 289,
+        "date": "2024-11-10"
+    },
+    {
+        "id": 5,
+        "title": "How to Find the Best Rental Properties",
+        "content": "Discover the key factors to consider when looking for rental properties.",
+        "image": "images/rental-properties.jpg",
+        "author": "Michael Green",
+        "views": 180,
+        "date": "2024-10-28"
+    },
+    {
+        "id": 6,
+        "title": "Understanding Mortgage Rates",
+        "content": "What you need to know about mortgage rates and how to get the best deal.",
+        "image": "images/mortgage-rates.jpg",
+        "author": "Emma White",
+        "views": 124,
+        "date": "2024-10-15"
+    }
+]

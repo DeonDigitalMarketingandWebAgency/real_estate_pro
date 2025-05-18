@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore properties on an interactive map.">
+    <title>Map View - Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Sytle.css"> <!-- Optional for custom styling -->
+    <style>
+        #map {
+            height: 80vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-4">
+        <h2 class="text-center mb-4">Explore Properties on Map</h2>
+        <div id="map"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <script>
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: { lat: 37.7749, lng: -122.4194 }, // Example: San Francisco
+            });
+
+            const properties = [
+                { id: 1, title: "Luxury Villa", lat: 37.778, lng: -122.417, price: "$1,200,000" },
+                { id: 2, title: "Modern Apartment", lat: 37.768, lng: -122.429, price: "$900,000" },
+            ];
+
+            properties.forEach(property => {
+                const marker = new google.maps.Marker({
+                    position: { lat: property.lat, lng: property.lng },
+                    map: map,
+                    title: property.title,
+                });
+
+                const infoWindow = new google.maps.InfoWindow({
+                    content: `<h5>${property.title}</h5><p>${property.price}</p>`,
+                });
+
+                marker.addListener("click", () => {
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+
+        window.onload = initMap;
+    </script>
+</body>
+
+</html>

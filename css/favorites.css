@@ -1,0 +1,15 @@
+function addToFavorites(id, title, image, location, price) {
+    const favorites=JSON.parse(localStorage.getItem('favorites')) || [];
+
+    if ( !favorites.some(item=> item.id===id)) {
+        favorites.push({
+            id, title, image, location, price
+        });
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    alert('Property added to favorites!');
+}
+
+else {
+    alert('This property is already in your favorites.');
+}
+}

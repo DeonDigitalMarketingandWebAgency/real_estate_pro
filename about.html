@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Modern and responsive real estate website for commercial, private, and industrial properties.">
+    <title>Real Estate Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logo/favicon.svg" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Sytle.css"> <!-- Optional for custom styling -->
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg nav-bar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="logo/logo.png" alt="RealEstatePro Logo" class="brand-logo"> <!-- Logo image -->
+            </a>
+
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="property-listings.html">Listings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <!-- Book an Appointment Button -->
+                    <li class="nav-item">
+                        <a class="btn btn-primary book-appointment-btn" href="booking-form.html">Book an Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="about-us py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">About Us</h1>
+
+            <!-- Company Background -->
+            <div class="mb-5">
+                <h2>Our Mission</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consectetur, molestiae suscipit tempora
+                    amet nisi facere sapiente quibusdam recusandae fugiat natus odit, ipsam, cum illum laudantium rem
+                    exercitationem. Sed, libero.
+                </p>
+                <div class="switch-box">
+                    <ul class="nav nav-tabs" id="missionTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="vision-tab" data-bs-toggle="tab"
+                                data-bs-target="#vision" type="button" role="tab" aria-controls="vision"
+                                aria-selected="true">Vision Statement</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="goals-tab" data-bs-toggle="tab" data-bs-target="#goals"
+                                type="button" role="tab" aria-controls="goals" aria-selected="false">Goals and
+                                Objectives</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="values-tab" data-bs-toggle="tab" data-bs-target="#values"
+                                type="button" role="tab" aria-controls="values" aria-selected="false">Core
+                                Values</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+                            <p>Our vision is to become the leading provider of innovative, customer-centric real estate
+                                solutions.</p>
+                        </div>
+                        <div class="tab-pane fade" id="goals" role="tabpanel" aria-labelledby="goals-tab">
+                            <ul>
+                                <li>To ensure seamless property transactions for our clients.</li>
+                                <li>To offer a wide range of property options catering to diverse needs.</li>
+                                <li>To maintain a high standard of professionalism and ethics.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="values" role="tabpanel" aria-labelledby="values-tab">
+                            <ul>
+                                <li>Integrity and transparency in all dealings.</li>
+                                <li>Commitment to customer satisfaction.</li>
+                                <li>Innovation and adaptability in the real estate market.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Team -->
+            <div class="my-5">
+                <h2>Meet the Team</h2>
+                <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="team-member position-relative text-center">
+                                <div class="image-frame">
+                                    <img src="img/ai-generated-7957457.png" class="rounded-circle" alt="John Doe">
+                                </div>
+                                <div class="overlay">
+                                    <h5>John Doe</h5>
+                                    <p>Founder & CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="team-member position-relative text-center">
+                                <div class="image-frame">
+                                    <img src="img/pexels-ade-dolcee-584961692-22484082.jpg" class="rounded-circle"
+                                        alt="Janet Smith">
+                                </div>
+                                <div class="overlay">
+                                    <h5>Janet Smith</h5>
+                                    <p>Real Estate Agent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add other team members as carousel items -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About RealEstatePro</h5>
+                    <p>We offer a wide range of commercial, residential, and industrial real estate services tailored to
+                        your needs.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="listings.html" class="text-white">Listings</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p>Email: info@realestatepro.com</p>
+                    <p>Phone: +1 234 567 890</p>
+                </div>
+                <!-- Connect With Us Section -->
+                <div class="col-md-3 mb-3">
+                    <h5>Connect with us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="#" class="text-white" style="text-decoration: none;">
+                                <i class="bi bi-facebook bi-lg" style="color: #3b5998;"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white" style="text-decoration: none;">
+                                <i class="bi bi-twitter bi-lg" style="color: #1da1f2;"></i>
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white" style="text-decoration: none;">
+                                <i class="bi bi-instagram bi-lg" style="color: #e1306c;"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-white" style="text-decoration: none;">
+                                <i class="bi bi-linkedin bi-lg" style="color: #0077b5;"></i>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="bg-white">
+                <p class="text-center">© 2024 RealEstatePro. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

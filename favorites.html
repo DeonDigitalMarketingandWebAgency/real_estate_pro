@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your favorite properties.">
+    <title>Favorites - Real Estate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Sytle.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">Your Favorite Properties</h2>
+        <div id="favorites-list" class="row g-3">
+            <!-- Favorite properties will be dynamically added here -->
+        </div>
+        <p class="text-center mt-4">
+            <a href="property-listings.html" class="btn btn-primary">Browse More Properties</a>
+        </p>
+    </div>
+    <script>
+        // Simulated data from localStorage
+        const favoriteProperties = JSON.parse(localStorage.getItem('favorites')) || [];
+        const favoritesList = document.getElementById('favorites-list');
+
+        if (favoriteProperties.length) {
+            favoriteProperties.forEach(property => {
+                const card = `
+          <div class="col-md-4">
+            <div class="card">
+              <img src="${property.image}" class="card-img-top" alt="${property.title}">
+              <div class="card-body">
+                <h5 class="card-title">${property.title}</h5>
+                <p class="card-text">${property.location}</p>
+                <p class="card-text text-primary">$${property.price}</p>
+                <a href="property-detail.html?id=${property.id}" class="btn btn-outline-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        `;
+                favoritesList.innerHTML += card;
+            });
+        } else {
+            favoritesList.innerHTML = `<p class="text-center">You haven't added any favorite properties yet.</p>`;
+        }
+    </script>
+</body>
+
+</html>
